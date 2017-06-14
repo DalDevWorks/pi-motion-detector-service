@@ -1,0 +1,2 @@
+class MotionEvent < ApplicationRecord
+end

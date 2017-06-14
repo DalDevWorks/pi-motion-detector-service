@@ -1,0 +1,22 @@
+<%= form_with(model: motion_event, local: true) do |form| %>
+  <% if motion_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(motion_event.errors.count, "error") %> prohibited this motion_event from being saved:</h2>
+
+      <ul>
+      <% motion_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :event %>
+    <%= form.text_field :event, id: :motion_event_event %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
